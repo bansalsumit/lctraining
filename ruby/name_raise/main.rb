@@ -6,6 +6,8 @@ require_relative "lib/name"
 
 puts "enter the first name"
 first_name = gets.chop
+
 puts "enter the last name"
 last_name  = gets.chop
-name = Name.new(first_name, last_name)
+
+p name = Name.new(first_name, last_name)
