@@ -5,4 +5,4 @@
 require_relative 'lib/occurrence_hash'
 
 char_occurrence_checker = CharOccurrenceChecker.new
-puts char_occurrence_checker.alphabet_repeat(gets.chop.split(""))
+puts char_occurrence_checker.alphabet_repeat(gets.chop)

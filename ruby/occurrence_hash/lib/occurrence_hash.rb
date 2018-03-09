@@ -1,7 +1,7 @@
 class CharOccurrenceChecker
-  def alphabet_repeat(incoming_string)
-    repeatness_of_alphabet = Hash.new(0)
-    incoming_string.each { |char| repeatness_of_alphabet[char] += 1 }
-    repeatness_of_alphabet
+  def alphabet_repeat(input_string)
+    group_character_by_occurrence = Hash.new(0)
+    input_string.each_char { |char| group_character_by_occurrence[char] += 1 }
+    group_character_by_occurrence
   end
 end
