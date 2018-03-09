@@ -1,7 +1,7 @@
 require 'csv'
 require_relative 'employee'
 
-class CsvReaderWriter
+class FileAndCsvReaderWriter
   attr_accessor :employees
   def initialize
     @employees = []
@@ -13,14 +13,14 @@ class CsvReaderWriter
     end
   end
 
-  def load_in_csv(csv_file_name)
-    employee_hash_base_on_desi = @employees.group_by { |emp| emp.designation}.sort.to_h  # emp(employee) desi(designation)
-    File.open(csv_file_name,"w") do |file|
-      employee_hash_base_on_desi.each_pair do |key, value|
+  def load_in_text_employee_based(text_file_name)
+    group_employee_base_on_desi = @employees.group_by { |emp| emp.designation }.sort.to_h  # desi(designation)
+    File.open(text_file_name,"w") do |file|
+      group_employee_base_on_desi.each_pair do |key, value|
         s = ""
         s = "s" if value.length > 1
         file.write("#{key}#{s}\n")
-        value.each {|emp| file.write("#{emp.name} (EmpId: #{emp.emp_id})\n")}
+        value.each { |emp| file.write("#{emp.name} (EmpId: #{emp.emp_id})\n") }
       end
     end
   end
