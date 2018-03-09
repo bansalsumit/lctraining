@@ -2,8 +2,8 @@ class Account
   attr_accessor :name, :account_no, :balance
   @@total_accounts = 0
 
-  def initialize(incoming_name, initial_balance)
-    @name = incoming_name
+  def initialize(input_name, initial_balance)
+    @name = input_name
     @balance = initial_balance
     @@total_accounts += 1
     @account_no = @@total_accounts
