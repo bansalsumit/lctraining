@@ -6,12 +6,12 @@
 require_relative "lib/account"
 
 p "enter name and balance of 1st customer"
-name_and_initial_balance = gets.chop.split(" ")
-customer1 = Account.new(name_and_initial_balance[0], name_and_initial_balance[1].to_i)
+customer_name_and_its_initial_balance = gets.chop.split(" ")
+customer1 = Account.new(customer_name_and_its_initial_balance[0], customer_name_and_its_initial_balance[1].to_i)
 
 p "enter name and balance of 2nd customer"
-name_and_initial_balance = gets.chop.split(" ")
-customer2 = Account.new(name_and_initial_balance[0], name_and_initial_balance[1].to_i)
+customer_name_and_its_initial_balance = gets.chop.split(" ")
+customer2 = Account.new(customer_name_and_its_initial_balance[0], customer_name_and_its_initial_balance[1].to_i)
 
 p "enter transfer amount"
 transfer_amount = gets.chop.to_i
