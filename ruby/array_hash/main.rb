@@ -5,5 +5,4 @@
 
 require_relative "lib/array_hash"
 
-list = List.new
-p list.element_by_length_and_sort_by_key(gets.chop.split(" "))
+p gets.chop.split(" ").element_by_length_and_sort_by_key
