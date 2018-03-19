@@ -1,5 +1,7 @@
 # Read a CSV file:
 
+require "csv"
+require_relative 'lib/employee'
 require_relative "lib/csv_reader_writer"
 
 file_and_csv_reader_writer = FileAndCsvReaderWriter.new

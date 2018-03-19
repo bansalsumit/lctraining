@@ -1,6 +1,3 @@
-require 'csv'
-require_relative 'employee'
-
 class FileAndCsvReaderWriter
   attr_accessor :employees
   def initialize
