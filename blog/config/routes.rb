@@ -4,6 +4,9 @@ Rails.application.routes.draw do
   get 'checkout/index'
 
   get 'checkout/create'
+  resources :articles do
+    resources :comments
+  end
 
   get 'welcome/index'
   resource :checkout, only: [:index, :new, :create]
