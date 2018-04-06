@@ -1,12 +1,11 @@
 require "irb"
 require_relative "lib/dsl"
 
-dsl = DSL.new()
+sl = ShoppingList.new
 
-product_class_name = dsl.create_product(gets.chop)
-
-
-
+sl.items do
+  add("Toothpaste",2)
+  add("Computer",1)
+end
 binding.irb
-#dsl.create_item(product_class_name, )
-
+p ShoppingList.list

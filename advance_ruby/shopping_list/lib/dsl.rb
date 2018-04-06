@@ -1,15 +1,19 @@
-class DSL
+class ShoppingList
 
-  def create_product(product_name)
-    Object.const_set(product_name, Class.new())
+  @@list = []
+
+  def items(&block)
+    self.instance_eval &block
   end
 
-  def create_item(product, item_name, y)
-    product.class.class_eval do |variable|
-      define_method item_name do
+  def add(product_name, product_quantity)
+    @product_name = product_name
+    @product_quantity = product_quantity
+    @@list << [@product_name, @product_quantity]
+  end
 
-      end
-    end
+  def self.list
+    p @@list
   end
 
 end
