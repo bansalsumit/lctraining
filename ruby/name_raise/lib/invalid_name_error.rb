@@ -1,0 +1,1 @@
+class InvalidNameError < StandardError ; end
